@@ -1,1 +1,1 @@
-include ':app', ':edgedrawable'
+include ':sample', ':edgedrawable'
