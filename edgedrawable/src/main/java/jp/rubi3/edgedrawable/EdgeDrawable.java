@@ -62,11 +62,12 @@ public class EdgeDrawable extends Drawable {
     }
 
     @Override
-    protected void onBoundsChange(Rect bounds) {
+    public void setBounds(Rect bounds) {
         dsts = generateRects(
                 bounds.left, bounds.left + edgeInset.left, bounds.right - edgeInset.right, bounds.right,
                 bounds.top, bounds.top + edgeInset.top, bounds.bottom - edgeInset.bottom, bounds.bottom
         );
+        super.setBounds(bounds);
     }
 
     public void setEdgeInset(Rect edgeInset) {
